@@ -1,19 +1,24 @@
-import mealsImg from "../../assets/meals.jpg"
-import classes from "../Layout/Header.module.css"
-import HeaderCartButton from "./HeaderCartButton"
+//Assets
+import mealsImg from "../assets/meals.jpg";
+
+//Styling
+import classes from "../Layout/Header.module.scss";
+
+//Components
+import HeaderCartButton from "./HeaderCartButton";
 
 const Header = (props) => {
-    return (
-        <>
-            <header className={classes.header}>
-                <h1>React meals</h1>
-                <HeaderCartButton onClick={props.onShowCart} />
-            </header>
-            <div className={classes["main-image"]}>
-                <img src={mealsImg} alt="Table full of food" />
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <header className={classes.header}>
+        <h1>Food Ordering App</h1>
+        <HeaderCartButton onClick={props.onShowCart} />
+      </header>
+      <div className={classes["main-image"]}>
+        <img src={mealsImg} alt="Table full of food" />
+      </div>
+    </>
+  );
+};
 
-export default Header
+export default Header;

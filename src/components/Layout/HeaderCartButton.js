@@ -1,7 +1,13 @@
+//Components
 import CartIcon from "../Cart/CartIcon";
-import classes from "../Layout/HeaderCartButton.module.css";
+
+//State management
 import CartContext from "../../store/cart-context";
 import { useContext, useEffect, useState } from "react";
+
+//Styles
+import classes from "../Layout/HeaderCartButton.module.scss";
+
 
 const HeaderCartButton = (props) => {
     const cartCtx = useContext(CartContext);
@@ -30,7 +36,7 @@ const HeaderCartButton = (props) => {
         <span className={classes.icon}>
             <CartIcon />
         </span>
-        <span>You cart</span>
+        <span className={classes["button-text"]}>Your cart</span>
         <span className={classes.badge}>{numberOfCartItems}</span>
     </button>
 }

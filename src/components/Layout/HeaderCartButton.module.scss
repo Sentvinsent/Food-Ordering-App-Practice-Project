@@ -1,0 +1,87 @@
+@use "../../styles/_colors" as colors;
+
+// Define button styles
+.button {
+  cursor: pointer;
+  font: inherit;
+  border: 1px solid rgba(colors.$shadow-black, 0.2);
+  background: linear-gradient(145deg, #4d1601, #6e2d09);
+  color: white;
+  padding: 0.3rem 1.5rem; // Mobile first
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px rgba(colors.$shadow-black, 0.2),
+    -1px -1px 3px rgba(colors.$shadow-black, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    background: linear-gradient(145deg, #2c0d00, #3e1808);
+  }
+
+  // Responsive styling for tablets
+  @media (min-width: 480px) {
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  // Responsive styling for larger screens
+  @media (min-width: 769px) {
+    padding: 0.75rem 3rem;
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-right: 0.5rem;
+  }
+
+  .badge {
+    background: linear-gradient(145deg, #b94517, #d45f2a);
+    padding: 0.25rem 1rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    font-weight: bold;
+    box-shadow: inset 2px 2px 5px rgba(colors.$shadow-black, 0.75),
+      inset -2px -2px 5px rgba(colors.$accent, 0.3);
+
+    &:hover,
+    &:active {
+      background: linear-gradient(145deg, #92320c, #aa4620);
+    }
+  }
+}
+
+//Hide cart button text on mobile
+@media (max-width: 480px) {
+  .button-text {
+    display: none;
+  }
+}
+
+// Bump animation for button interaction
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

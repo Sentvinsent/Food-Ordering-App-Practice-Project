@@ -5,9 +5,9 @@
   cursor: pointer;
   font: inherit;
   border: 1px solid rgba(colors.$shadow-black, 0.2);
-  background: linear-gradient(145deg, #4d1601, #6e2d09);
+  background: colors.$main-button;
   color: white;
-  padding: 0.3rem 1.5rem; // Mobile first
+  padding: 0.3rem 1.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,7 +19,7 @@
 
   &:hover,
   &:active {
-    background: linear-gradient(145deg, #2c0d00, #3e1808);
+    background: colors.$secondary-button;
   }
 
   // Responsive styling for tablets
@@ -41,7 +41,7 @@
   }
 
   .badge {
-    background: linear-gradient(145deg, #b94517, #d45f2a);
+    background: colors.$main-button;
     padding: 0.25rem 1rem;
     border-radius: 25px;
     margin-left: 1rem;
@@ -51,15 +51,15 @@
 
     &:hover,
     &:active {
-      background: linear-gradient(145deg, #92320c, #aa4620);
+      background: colors.$secondary-button;
     }
   }
-}
 
-//Hide cart button text on mobile
-@media (max-width: 480px) {
-  .button-text {
-    display: none;
+  //Hide cart button text on mobile
+  @media (max-width: 480px) {
+    .button-text {
+      display: none;
+    }
   }
 }
 

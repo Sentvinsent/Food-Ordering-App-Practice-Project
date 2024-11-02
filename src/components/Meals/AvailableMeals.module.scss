@@ -1,0 +1,48 @@
+@use "../../styles/_colors" as colors;
+
+.meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mealsLoading,
+.fetchErrorContainer {
+  text-align: center;
+}
+
+.fetchButton {
+  font: inherit;
+  cursor: pointer;
+  background-color: colors.$primary-button;
+  border: 1px solid colors.$primary-button;
+  color: colors.$accent;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+
+  &:hover,
+  &:active {
+    background-color: colors.$secondary-button;
+    border-color: colors.$secondary-button;
+  }
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

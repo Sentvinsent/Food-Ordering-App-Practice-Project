@@ -1,20 +1,23 @@
+@use "../../../styles/colors" as colors;
+@use "../../../styles/variables" as vars;
+
 .form {
   text-align: right;
 
   button {
     font: inherit;
     cursor: pointer;
-    background-color: #8a2b06;
-    border: 1px solid #8a2b06;
-    color: white;
+    background: colors.$primary-button;
+    border: vars.$button-border;
+    color: colors.$accent;
     padding: 0.25rem 2rem;
     border-radius: 20px;
     font-weight: bold;
 
     &:hover,
     &:active {
-      background-color: #641e03;
-      border-color: #641e03;
+      background: colors.$secondary-button;
+      border: colors.$primary-button;
     }
   }
 }

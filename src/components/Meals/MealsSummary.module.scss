@@ -1,4 +1,5 @@
 @use "../../styles/_colors" as colors;
+@use "../../styles/_variables" as vars;
 
 .summary {
   text-align: center;
@@ -7,11 +8,13 @@
   margin: auto;
   margin-top: -10rem;
   position: relative;
-  background-color: colors.$secondary;
-  color: white;
+  background-color: rgba(colors.$secondary, 0.75);
+  backdrop-filter: vars.$primary-blur;
+  -webkit-backdrop-filter: vars.$primary-blur;
+  color: colors.$accent;
   border-radius: 14px;
   padding: 1rem;
-  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 18px 10px rgba(colors.$shadow-black, 0.25);
 
   h2 {
     font-size: 2rem;

@@ -1,16 +1,17 @@
-@use "../../styles/_colors" as colors;
+@use "../../styles/colors" as colors;
+@use "../../styles/variables" as vars;
 
 .meals {
   max-width: 60rem;
   width: 90%;
   margin: 2rem auto;
   animation: meals-appear 1s ease-out forwards;
-}
 
-.meals ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .mealsLoading,
@@ -21,8 +22,8 @@
 .fetchButton {
   font: inherit;
   cursor: pointer;
-  background-color: colors.$primary-button;
-  border: 1px solid colors.$primary-button;
+  background: colors.$primary-button;
+  border: vars.$button-border;
   color: colors.$accent;
   padding: 0.25rem 2rem;
   border-radius: 20px;
@@ -30,8 +31,7 @@
 
   &:hover,
   &:active {
-    background-color: colors.$secondary-button;
-    border-color: colors.$secondary-button;
+    background: colors.$secondary-button;
   }
 }
 

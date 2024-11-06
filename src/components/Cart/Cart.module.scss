@@ -1,0 +1,44 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/variables" as vars;
+
+$margin: 1rem;
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: $margin 0;
+}
+
+.actions {
+  text-align: right;
+
+  button {
+    font: inherit;
+    cursor: pointer;
+    background: colors.$primary-button;
+    color: colors.$accent;
+    border: vars.$button-border;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: $margin;
+
+    &:hover,
+    &:active {
+      background: colors.$secondary-button;
+      color: colors.$accent;
+    }
+  }
+  .button--alt {
+    background: transparent;
+    color: colors.$primary;
+  }
+}

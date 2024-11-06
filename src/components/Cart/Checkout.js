@@ -1,4 +1,4 @@
-import classes from './Checkout.module.css';
+import classes from './Checkout.module.scss';
 import { useRef, useState } from 'react';
 
 const isEmpty = value => value.trim() === '';

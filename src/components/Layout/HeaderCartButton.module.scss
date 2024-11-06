@@ -1,17 +1,22 @@
 @use "../../styles/_colors" as colors;
+@use "../../styles/_variables" as vars;
 
-// Define button styles
+// Define variables for reusability
+$border-radius: 25px;
+$icon-size: 1.35rem;
+
+// Button styles
 .button {
   cursor: pointer;
   font: inherit;
-  border: 1px solid rgba(colors.$shadow-black, 0.2);
+  border: vars.$button-border;
   background: colors.$primary-button;
-  color: white;
+  color: colors.$accent;
   padding: 0.3rem 1.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 25px;
+  border-radius: $border-radius;
   font-weight: bold;
   box-shadow: 1px 1px 3px rgba(colors.$shadow-black, 0.2),
     -1px -1px 3px rgba(colors.$shadow-black, 0.1);
@@ -35,15 +40,15 @@
   }
 
   .icon {
-    width: 1.35rem;
-    height: 1.35rem;
+    width: $icon-size;
+    height: $icon-size;
     margin-right: 0.5rem;
   }
 
   .badge {
     background: colors.$primary-button;
     padding: 0.25rem 1rem;
-    border-radius: 25px;
+    border-radius: $border-radius;
     margin-left: 1rem;
     font-weight: bold;
     box-shadow: inset 2px 2px 5px rgba(colors.$shadow-black, 0.75),
@@ -55,7 +60,7 @@
     }
   }
 
-  //Hide cart button text on mobile
+  // Hide cart button text on mobile
   @media (max-width: 480px) {
     .button-text {
       display: none;

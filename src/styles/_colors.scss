@@ -1,6 +1,12 @@
-$primary: #641e03;
-$secondary: #383838;
-$accent: #f0f8ff;
-$shadow-black: #000000;
-$primary-button: linear-gradient(145deg, #4d1601, #6e2d09);
-$secondary-button: linear-gradient(145deg, #2c0d00, #3e1808);
+$primary: #8b4513; // Saddle Brown
+$secondary: #2f4f4f; // Dark Slate Gray
+$accent: #fdf5e6; // Old Lace (a softer accent color for better readability)
+$shadow-black: #2c2c2c; // Soft Black
+
+// Button gradients
+$primary-button: linear-gradient(145deg, #8b4513, #a0522d); // Saddle Brown to Sienna
+$secondary-button: linear-gradient(145deg, #483d8b, #6a5acd); // Dark Slate Blue to Slate Blue
+
+// Error colors
+$primary-error: #ffe5e5; // Light Coral (a more soothing error background)
+$secondary-error: #d32f2f; // Red (a slightly darker red for better contrast)

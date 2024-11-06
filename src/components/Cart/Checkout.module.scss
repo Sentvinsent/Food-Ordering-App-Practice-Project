@@ -1,0 +1,65 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/variables" as vars;
+
+.form {
+  margin: 1rem 0;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  input {
+    font: inherit;
+    border: vars.$button-border;
+    border-radius: 4px;
+    width: 20rem;
+    max-width: 100%;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  button {
+    font: inherit;
+    color: colors.$primary;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+
+    &:hover,
+    &:active {
+      background-color: colors.$primary-error;
+    }
+  }
+
+  .submit {
+    border: vars.$button-border;
+    background: colors.$primary-button;
+    color: colors.$accent;
+
+    &:hover,
+    &:active {
+      background: colors.$secondary-button;
+    }
+  }
+}
+
+.invalid label {
+  color: colors.$secondary-error;
+}
+
+.invalid input {
+  border-color: colors.$secondary-error;
+  background-color: colors.$primary-error;
+}

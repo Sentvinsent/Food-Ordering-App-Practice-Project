@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Food-Ordering-App-Practice-Project/static/css/main.647436ba.css",
+    "main.js": "/Food-Ordering-App-Practice-Project/static/js/main.eb6e45b9.js",
+    "static/media/meals.jpg": "/Food-Ordering-App-Practice-Project/static/media/meals.803f5fb5ee8088963f37.jpg",
+    "index.html": "/Food-Ordering-App-Practice-Project/index.html",
+    "main.647436ba.css.map": "/Food-Ordering-App-Practice-Project/static/css/main.647436ba.css.map",
+    "main.eb6e45b9.js.map": "/Food-Ordering-App-Practice-Project/static/js/main.eb6e45b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.647436ba.css",
+    "static/js/main.eb6e45b9.js"
+  ]
+}
